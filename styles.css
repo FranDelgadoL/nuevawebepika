@@ -1,0 +1,298 @@
+.container {
+    text-align: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    font-family: 'Courier Prime', monospace;
+  }
+  
+  
+  .logo-image {
+    width: 150px;
+    height: auto;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .bio-photo {
+    width: 100%; /* La imagen ocupará el 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Evita que la imagen se agrande más allá del contenedor */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    object-fit: cover; /* Hace que la imagen cubra el contenedor sin deformarse */
+  }
+  
+  /* Media query para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    .bio-photo {
+      width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+      height: auto; /* Mantiene la proporción */
+    }
+  }
+  
+  
+  .nav-link {
+    color: rgb(196, 224, 41);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding-right: 60px;
+  }
+  
+  .nav-link:hover {
+    color: #ff4081;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    color: white;
+    margin: 0 30px;
+  }
+  
+  #background-slider {
+    position: absolute; /* Lo dejamos absoluto pero dentro de #inicio */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Asegura que el fondo cubra toda la sección */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1; /* Asegura que el fondo esté detrás del contenido */
+    pointer-events: none; /* Permite interactuar con el contenido encima */
+  }
+  
+
+  #inicio {
+    position: relative;
+    height: 100vh; /* Ocupar toda la altura de la ventana */
+    overflow: hidden; /* Asegura que el fondo no se salga de la sección */
+  }
+  
+  
+  #inicio {
+    position: relative;  /* Necesario para que el fondo se posicione correctamente dentro de esta sección */
+  }
+
+  #inicio h2, #inicio p {
+    position: relative; /* Necesario para que el z-index funcione */
+    z-index: 2; /* Asegura que el texto se vea por encima del fondo */
+  }
+  
+  
+  main {
+    font-family: 'Courier Prime', monospace;
+  }
+  
+  .section {
+    padding: 20px;
+  }
+  
+  .section-fullscreen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .nav.open {
+    display: block;
+  }
+  
+  .parallax {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    animation: slideshow 5s infinite alternate ease-in-out;
+    position: relative;
+  }
+  
+  .parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    animation: float 5s infinite ease-in-out;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(27, 26, 27);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: rgb(27, 26, 27);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+  }
+  
+  .alpha-text span {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    color: white;
+    font-size: 2.5em;
+  }
+  
+  .alpha-text p {
+    font-size: 2em;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.9;
+    animation: float 10s infinite ease-in-out alternate;
+  }
+  
+  .psychedelic-text {
+    color: rgb(196, 224, 41);
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .glitch-effect {
+    animation: glitch 0.7s infinite alternate;
+  }
+  
+  @keyframes glitch {
+    0% { transform: translate(0, 0); opacity: 1; }
+    25% { transform: translate(2px, -2px); opacity: 0.8; }
+    50% { transform: translate(-2px, 2px); opacity: 1; }
+    75% { transform: translate(2px, 2px); opacity: 0.8; }
+    100% { transform: translate(-2px, -2px); opacity: 1; }
+  }
+  
+  .footer {
+    padding: 20px;
+    font-family: courier prime, monospace;
+    background-color: rgb(34, 34, 33);
+  }
+  
+  .dev-logo img {
+    width: 3.2em;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    vertical-align: middle;
+  }
+  
+  .dev-logo:hover img {
+    transform: scale(1.2);
+  }
+  
+  .spotify-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .spotify-list li {
+    margin: 10px;
+  }
+  
+  .spotify-list a {
+    text-decoration: none;
+    color: black;
+    background: lightgrey;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .spotify-list a:hover {
+    background: linear-gradient(135deg, #0e7c3a, #1DB954);
+    transform: translateY(-2px);
+  }
+
+  ul.fechas li.proximamente {
+    margin-top: 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .nav {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+      width: 100%;
+    }
+  
+    .nav.open {
+      display: flex;
+      max-height: 300px;
+      gap: 10px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .logo-image {
+      width: 100px;
+    }
+}

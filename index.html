@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉPIKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+  <div class="container">
+    
+    <header class="header">
+
+      
+      <img src="images/logoparawebepika.jpg" alt="ÉPIKA Logo" class="logo-image" />
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars fa-2x"></i>
+      </div>
+      <nav class="nav" id="nav">
+        <!-- Links generados por JS -->
+      </nav>
+      <div class="social-links">
+        <a href="https://www.instagram.com/epika_band/" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.youtube.com/@Épika-Py" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+        <a href="https://open.spotify.com/artist/5lvdH6XeqBRX7ek7p5orHw" target="_blank"><i class="fab fa-spotify fa-lg"></i></a>
+      </div>
+    </header>
+    <main class="main">
+      <section id="inicio" class="section section-fullscreen parallax">
+        <div id="background-slider"></div>  <!-- El fondo se encuentra aquí -->
+        <div class="intro">
+          <h2 class="alpha-text psychedelic-text"><span>ÉPIKA</span></h2>
+          <p>Banda de rock alternativo de Sudamérica (Asunción-Paraguay)</p>
+        </div>
+      </section>
+      
+      <section id="musicas" class="section fade-in">
+        <h2 class="psychedelic-text">Músicas</h2>
+        <ul class="spotify-list">
+          <li><a href="https://open.spotify.com/track/2I7EMvGdnAIohAFeY02OHm" target="_blank" rel="noopener noreferrer">🎵 Cadillac</a></li>
+          <li><a href="https://open.spotify.com/track/6R0Dz736ZNvqFvuf5TSoDX" target="_blank" rel="noopener noreferrer">🎵 Ancestral</a></li>
+          <li><a href="https://open.spotify.com/track/1XZPHXQT7E7uschLYMWoNd" target="_blank" rel="noopener noreferrer">🎵 Drugos</a></li>
+          <li><a href="https://open.spotify.com/track/0drYdaST9gFQgxN6hRGyd4" target="_blank" rel="noopener noreferrer">🎵 Cuentos</a></li>
+          <li><a href="https://open.spotify.com/track/1crbauq36URdbFmGzBVX40" target="_blank" rel="noopener noreferrer">🎵 Lo Abisal</a></li>
+          <li><a href="https://open.spotify.com/track/4mP0Ua9PU1tWdmSfwdN72o" target="_blank" rel="noopener noreferrer">🎵 Irreductibles</a></li>
+        </ul>
+      </section>
+      <section id="bio" class="section fade-in">
+        <h2 class="psychedelic-text">Biografía</h2>
+        <img src="/images/carrusel.jpg" alt="ÉPIKA Band" class="bio-photo glitch-effect" />
+        <p>Épika, banda de rock que fusiona hard, power y noise-rock, se formó en 2001, en Asunción-Paraguay, que en poco tiempo tuvo que separarse.
+    Durante la pandemia, después de 18 años los miembros se reencontraron, sumando a un nuevo integrante.
+    Este resurgimiento trae consigo una nueva perspectiva y una intensificación de su distintivo sonido ecléctico.<br></br><br></br>
+    Guitarras: Alex Giaever, Paolo Castiñeira<br></br>
+    Batería: Rubén Arce<br></br>
+    Bajo: Fran Delgado<br></br>
+    Voz: Rodrigo Pampliega</p>
+
+    <p style="font-style: italic; font-size: 0.9em; color: gray;">
+      Las grabaciones fueron hechas en Sátiro Estudios por Felipe Achaval y en BlueNoise Records por Wladimir Woitas —que también colaboró en los teclados y synth—<br>
+      y Colo O'Nell, en la remezcla y ecualizaciones.
+    </p>
+      </section>
+      <section id="videos" class="section fade-in">
+        <h2 class="psychedelic-text">Videos</h2>
+        <a href="https://www.youtube.com/@Épika-Py" target="_blank" class="button">
+        Visitar nuestro canal YOUTUBE
+      </a>
+      </section>
+
+      <div class="apartados-container">
+        <div class="evento" id="fechas">
+          <h2 class="psychedelic-text">Fechas</h2>
+          <ul class="fechas">
+            <li>9 de mayo 2025, Espacio Hansen</li>
+            <li class="proximamente">Próximamente</li>
+            <li class="proximamente">Próximamente</li>
+          </ul>
+        </div>
+
+        <div class="section fade-in">
+          <a href="letras.html" class="btn">Letras de las Canciones</a>
+          </div>
+    
+
+<div class="evento" id="contacto">
+  <h2 class="psychedelic-text">Contacto</h2>
+  <ul class="contacto">
+    <li>
+      <a href="https://wa.me/595961612133" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" style="width: 30px; height: 30px;">
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    </main>
+    <footer class="footer">
+      © 2024 ÉPIKA | Todos los derechos reservados | Desarrollado por <a href="https://frandelgadol.github.io/webcv/" target="_blank" rel="noopener noreferrer" class="dev-logo">
+        <img src="images/gasrecort3.png" alt="Fran Delgado Dev" />
+      </a>
+          </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
