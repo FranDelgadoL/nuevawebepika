@@ -26,19 +26,37 @@ const menuItems = [
   
   let currentBackground = 0;
 
- const backgrounds = [
-  'url(images/epikafondo1.JPG)',
-  'url(images/epikafondo2.JPG)',
-  'url(images/epikafondo2.JPG)',
-  'url(images/epikafondo2.JPG)'
-];
+  const backgrounds = [
+    'url(images/epikafondo1.JPG)',
+    'url(images/epikafondo2.JPG)',
+    'url(images/epikafondo3.JPG)',
+    'url(images/epikafondo4.JPG)'
+  ];
   
-function changeBackground() {
-  const slider = document.getElementById('background-slider');
-  slider.style.backgroundImage = backgrounds[currentBackground];
-  currentBackground = (currentBackground + 1) % backgrounds.length; // Cambia al siguiente fondo
-}
-
-// Inicializar con el primer fondo
-changeBackground();
+  let current = 0;
+  let showingBg1 = true;
+  
+  function changeBackground() {
+    const bg1 = document.getElementById('bg1');
+    const bg2 = document.getElementById('bg2');
+  
+    const nextImage = backgrounds[current];
+    current = (current + 1) % backgrounds.length;
+  
+    if (showingBg1) {
+      bg2.style.backgroundImage = nextImage;
+      bg2.classList.add('visible');
+      bg1.classList.remove('visible');
+    } else {
+      bg1.style.backgroundImage = nextImage;
+      bg1.classList.add('visible');
+      bg2.classList.remove('visible');
+    }
+  
+    showingBg1 = !showingBg1;
+  }
+  
+  changeBackground(); // Mostrar la primera al inicio
+  setInterval(changeBackground, 5000); // Cambia cada 5 seg
+  
   
