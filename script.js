@@ -27,10 +27,12 @@ const menuItems = [
   let currentBackground = 0;
 
   const backgrounds = [
-    'url(images/epikafondo1.JPG)',
-    'url(images/epikafondo2.JPG)',
-    'url(images/epikafondo3.JPG)',
-    'url(images/epikafondo4.JPG)'
+    'url(images/epika1.webp)',
+    'url(images/epika4.webp)',
+    'url(images/epika3.webp)',
+    'url(images/epika2.webp)',
+    'url(images/epika6.webp)',
+    'url(images/epika5.webp)',
   ];
   
   let current = 0;
